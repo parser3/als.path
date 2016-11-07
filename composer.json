@@ -1,0 +1,27 @@
+{
+    "name": "als/path",
+    "type": "library",
+    "description": "Path Component.",
+    "keywords": ["pasrer3", "path"],
+    "homepage": "https://github.com/parser3/als.path",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonid Knyazev",
+            "email": "leonid@knyazev.me",
+            "homepage": "https://knyazev.me",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Als\\Path\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Als\\Path\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
