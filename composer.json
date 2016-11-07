@@ -2,7 +2,11 @@
     "name": "als/path",
     "type": "library",
     "description": "Path Component.",
-    "keywords": ["pasrer3", "path"],
+    "keywords": [
+        "als",
+        "parser3",
+        "path"
+    ],
     "homepage": "https://github.com/parser3/als.path",
     "license": "MIT",
     "authors": [
@@ -13,11 +17,18 @@
             "role": "Developer"
         }
     ],
+    "support": {
+        "issues": "https://github.com/parser3/als.path/issues"
+    },
     "autoload": {
-        "psr-4": { "Als\\Path\\": "src/" }
+        "psr-4": {
+            "Als\\Path\\": "src/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "Als\\Path\\Tests\\": "tests/" }
+        "psr-4": {
+            "Als\\Path\\Tests\\": "tests/"
+        }
     },
     "extra": {
         "branch-alias": {
