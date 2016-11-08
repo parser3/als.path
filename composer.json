@@ -20,6 +20,9 @@
     "support": {
         "issues": "https://github.com/parser3/als.path/issues"
     },
+    "require-dev": {
+        "parser/autoload": "^0.1"
+    },
     "autoload": {
         "psr-4": {
             "Als\\Path\\": "src/"
@@ -27,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Als\\Path\\Tests\\": "tests/"
+            "Als\\Path\\Test\\": "test/"
         }
     },
     "extra": {
