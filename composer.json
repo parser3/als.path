@@ -16,18 +16,22 @@
     "support": {
         "issues": "https://github.com/parser3/als.path/issues"
     },
-    "require": {},
+    "require-dev": {
+        "parser/composer": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "Als\\Path\\": "src/"
         }
     },
-    "require-dev": {
-        "parser/composer": "~1.0"
-    },
     "autoload-dev": {
         "psr-4": {
             "Als\\Path\\Test\\": "test/"
+        }
+    },
+    "extra": {
+        "platform": {
+            "parser": "3.4.4"
         }
     },
     "repositories": [
