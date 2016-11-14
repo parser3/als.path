@@ -452,7 +452,7 @@ If no `path` segments are passed, `^Als/Path:resolve[]` will return the absolute
 
 ## References
 
-- Questions to <leonid@knyazev.me> | <n3o@design.ru>
+- Questions to Leonid Knyazev <leonid@knyazev.me> | <n3o@design.ru>
 - Bug reports and Feature requests to Issues.
 
 ---
