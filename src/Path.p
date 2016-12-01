@@ -20,7 +20,7 @@ $self.separator[/]
 $self.delimiter[:]
 
 # @{string} [cwd]
-$self.cwd[${self.separator}^env:DOCUMENT_ROOT.trim[both;$self.separator]]
+$self.cwd[$request:document-root]
 #end @auto[]
 
 
@@ -83,7 +83,7 @@ $result[]
 ^self._assert[$path]
 
 ^if(^path.length[] > 0){
-	$isAbsolute(^path.left(1) eq $self.separator)
+	$isAbsolute(^self.isAbsolute[$path])
 	$trailingSeparator(^path.right(1) eq $self.separator)
 
 	$path[^self._normalize[$path;$isAbsolute]]
@@ -320,8 +320,12 @@ $result(false)
 
 ^self._assert[$path]
 
-^if(def $path && ^path.left(1) eq $self.separator){
-	$result(true)
+^if(def $path){
+	^if(^path.left(1) eq "/" || ^path.left(1) eq "\"){
+		$result(true)
+	}(^path.length[] > 2 && ^path.mid(1;1) eq ":" && (^path.mid(2;1) eq "/" || ^path.mid(2;1) eq "\")){
+		$result(true)
+	}
 }
 #end @isAbsolute[]
 
@@ -357,7 +361,7 @@ $result[]
 @_normalize[path;isAbsolute]
 $result[]
 
-$isAbsolute(^isAbsolute.bool(^path.left(1) eq $self.separator))
+$isAbsolute(^self.isAbsolute[$path])
 
 $path[^path.trim[both;$self.separator]]
 
